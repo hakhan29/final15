@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Face API Demo</title>
+    <script defer src="./face-api.min.js"></script> <!-- Face API 로드 -->
+    <script defer src="./script.js"></script> <!-- 수정된 JavaScript 파일 -->
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: black;
+        }
+        #video {
+            margin-bottom: 20px;
+        }
+        #colorBox {
+            width: 200px;
+            height: 100px;
+            margin-bottom: 20px;
+        }
+        #expression {
+            font-size: 24px;
+            color: white;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+        }
+        #startAudio {
+            display: none; /* 기본적으로 숨김 */
+        }
+    </style>
+</head>
+<body>
+    <video id="video" width="720" height="560" autoplay muted></video>
+    <div id="colorBox"></div>
+    <div id="expression"></div>
+    <button id="startAudio">음악 시작</button>
+</body>
+</html>
